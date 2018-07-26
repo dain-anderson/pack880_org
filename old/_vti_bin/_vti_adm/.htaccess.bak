@@ -1,0 +1,18 @@
+# -FrontPage-
+
+Options None
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+require group administrators
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthType Basic
+AuthName fc3.test.com
+AuthUserFile /www/htdocs/_vti_pvt/service.pwd
+AuthGroupFile /www/htdocs/_vti_pvt/service.grp
